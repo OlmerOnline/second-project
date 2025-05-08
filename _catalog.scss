@@ -1,0 +1,421 @@
+.top-catalog {
+    background-image: url(image/image-catalog/header-catalog.jpeg);
+    background-size: cover;
+}
+
+.top-catalog__title {
+    color: $color-text-white;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 70px;
+    padding-top: 127px;
+    padding-bottom: 126px;
+}
+
+.box-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-link {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-bottom: 41px;
+}
+
+.box-link__link {
+    color: $color-text-black;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    text-decoration: none;
+}
+
+.box-filters {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-bottom: 36px;
+}
+
+.filters-form {
+    position: relative;
+}
+
+.filters-form_item-1 {
+    order: 1;
+}
+.filters-form_item-2 {
+    order: 2;
+}
+
+
+.filters__list {
+    appearance: none;
+    
+    height: 40px;
+    box-sizing: border-box;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 20px;
+    padding-left: 23px;
+    background-image: url(image/image-catalog/Polygon-filter.jpeg);
+    background-repeat: no-repeat;
+    background-position: right 22px top 13px;    
+}
+
+.filters__list_filter {
+    color: $color-text-black;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    width: 182px;
+}
+
+.filters__list_sort {
+    color: $color-text-black;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    width: 227px;
+}
+
+.product-show-more {
+    padding-top: 32px;
+}
+
+.product-show-more__link {
+    color: $color-text-black;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-decoration-line: underline;
+    display: inline-block;
+}
+
+fieldset {
+    border: none;
+}
+
+.box-filters-extended {
+    width: 445px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 48px;
+    padding-right: 48px;
+    position: absolute;
+    top: 54px;
+    right: 0;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 30px -15px;
+}
+
+.filters {
+  
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+
+    &__delivery-price-color {
+        width: 191px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    &__delivery {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    &__delivery-input {
+        display: none;
+    }
+
+    &__delivery-label {
+        position: relative;
+        padding-left: 30px;
+    }
+
+    &__delivery-label::before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        border: 1px solid rgb(136, 136, 136);
+        border-radius: 60px;
+        position: absolute;
+        left: 0;
+    }
+
+    &__delivery-input:checked + &__delivery-label::before {
+        background-image: url(image/image-catalog/check.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        border: 1px solid rgb(0, 0, 0);
+    }
+
+    &__delivery-label {
+        color: rgb(0, 0, 0);
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+    }
+
+    &__price {
+        width: 191px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    &__price-box {
+        position: relative;
+        height: 10px;
+        display: inline-block;
+        margin-top: -5px;
+    }
+
+    &__price-box input {
+        position: absolute;
+    }
+
+    &__price-label {
+        color: rgb(0, 0, 0);
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+    }
+
+    &__price-input {
+        width: 190px;
+        height: 10px;
+        overflow: hidden;
+        outline: none;
+    }
+
+    &__price-input,
+    &__price-input::-webkit-slider-runnable-track,
+    &__price-input::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        background: none;
+    }
+
+    &__price-input::-webkit-slider-runnable-track {
+        width: 190px;
+        height: 1px;
+        background: #000;
+    }
+
+    &__price-input:nth-child(2)::-webkit-slider-runnable-track {
+        background: none;
+    }
+
+    &__price-input::-webkit-slider-thumb {
+        position: relative;
+        height: 8px;
+        width: 8px;
+        margin-top: -4px;
+        background: #000;
+        border: 1px solid #000;
+        border-radius: 25px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    &__price-input::-webkit-slider-thumb:active {
+        cursor: grabbing;
+    }
+
+    &__price-input:nth-child(1)::-webkit-slider-thumb {
+        z-index: 2;
+    }
+
+    &__color {
+        display: flex;
+        flex-wrap: wrap;
+        width: 190px;
+        gap: 14px;
+    }
+
+    &__color-item {
+        width: 15px;
+        height: 15px;
+    }
+
+    &__color-input {
+        display: none;
+    }
+
+    &__color-label {
+        position: relative;
+    }
+
+    &__color-label::before {
+        content: "";
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        border: 1px solid rgb(136, 136, 136);
+        position: absolute;
+        left: 0;
+    }
+
+    &__color-input:checked + &__color-label::before {
+        background-image: url(image/image-catalog/check.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        border: 1px solid rgb(0, 0, 0);
+    }
+
+    &__color-input_black:checked + &__color-label_black::before {
+        background-image: url(image/image-catalog/check-white.svg);
+        border: 1px solid rgb(136, 136, 136);
+    }
+
+    &__color-label_white::before {
+        background-color: white;
+        border: 1px solid rgb(136, 136, 136);
+    }
+
+    &__color-label_black::before {
+        background-color: black;
+        border: 1px solid black
+    }
+
+    &__color-label_gray::before {
+        background-color: rgb(115, 115, 115);
+        border: 1px solid rgb(115, 115, 115);
+    }
+
+    &__color-label_red::before {
+        background-color: rgb(255, 0, 0);
+        border: 1px solid rgb(255, 0, 0)
+    }
+
+    &__color-label_orange::before {
+        background-color: rgb(255, 122, 65);
+        border: 1px solid rgb(255, 122, 65);
+    }
+
+    &__color-label_yellow::before {
+        background-color: rgb(242, 203, 1);
+        border: 1px solid rgb(242, 203, 1);
+    }
+
+    &__color-label_green::before {
+        background-color: rgb(0, 191, 42);
+        border: 1px solid rgb(0, 191, 42);
+    }
+
+    &__color-label_dark-green::before {
+        background-color: rgb(28, 204, 151);
+        border: 1px solid rgb(28, 204, 151);
+    }
+
+    &__color-label_blue::before {
+        background-color: rgb(0, 159, 227);
+        border: 1px solid rgb(0, 159, 227);
+    }
+
+    &__color-label_dark-blue::before {
+        background-color: rgb(0, 10, 248);
+        border: 1px solid rgb(0, 10, 248);
+    }
+
+    &__color-label_dark-purple::before {
+        background-color: rgb(103, 16, 214);
+        border: 1px solid rgb(103, 16, 214);
+    }
+
+    &__color-label_purple::before {
+        background-color: rgb(157, 13, 181);
+        border: 1px solid rgb(157, 13, 181);
+    }
+
+    &__color-label_dark-pink::before {
+        background-color: rgb(216, 154, 255);
+        border: 1px solid rgb(216, 154, 255);
+    }
+
+    &__color-label_pink::before {
+        background-color: rgb(255, 101, 166);
+        border: 1px solid rgb(255, 101, 166);
+    }
+
+    &__rooms {
+        width: 191px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    &__rooms-input {
+        display: none;
+    }
+
+    &__rooms-label {
+        position: relative;
+        padding-left: 30px;
+        color: rgb(0, 0, 0);
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+    }
+
+    &__rooms-label::before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        border: 1px solid rgb(136, 136, 136);
+        position: absolute;
+        left: 0;
+    }
+
+    &__rooms-input:checked + &__rooms-label::before {
+        background-image: url(image/image-catalog/check.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        border: 1px solid rgb(0, 0, 0);
+    }
+
+    &__title {
+        margin-bottom: 14px;
+        color: rgb(5, 5, 5);
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+
+    &__btn-box {
+        display: flex;
+        justify-content: end;
+    }
+
+    &__btn {
+        width: 190px;
+        height: 40px;
+        margin-top: 36px;
+        
+        box-sizing: border-box;
+        border: 1px solid rgb(4, 4, 4);
+        border-radius: 20px;
+        color: rgb(0, 0, 0);
+        background-color: $color-text-white;
+        
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: center;     
+    }
+}

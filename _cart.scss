@@ -1,0 +1,245 @@
+@keyframes active-buy-btn{
+    0% {
+        transform: translate(0,0);
+    }
+    20% {
+        transform: translate(-50px,0);
+    }
+    40% {
+        transform: translate(50px,0);
+    }
+    60% {
+        transform: translate(-25px,0);
+    }
+    80% {
+        transform: translate(25px,0);
+    }
+    100% {
+        transform: translate(0,0);
+    }
+}
+
+
+.top-cart {
+    background-image: url(image/image-cart/bg-cart.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+    &__title {
+        color: $color-text-white;
+        font-size: 64px;
+        font-weight: 600;
+        line-height: 70px;
+        padding-top: 127px;
+        padding-bottom: 126px;
+    }
+}
+
+.cart {
+    margin-top: 64px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 32px;
+
+    &__content {
+        grid-column: span 8;
+    }
+
+    &__name-box {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 14px;
+    }
+
+    &__name-box-item {
+        color: $color-text-black;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+
+    &__name-box-product {
+        padding-left: 3px;
+    }
+
+    &__name-box-count {
+        padding-right: 27px;
+    }
+
+    &__product-box {
+        padding-top: 32px;
+        padding-bottom: 32px;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 32px;
+        border-top: 0.5px solid rgb(202, 205, 216);
+    }
+
+    &__product-image {
+        grid-column: span 2;
+    }
+
+    &__product {
+        grid-column: span 5;
+    }
+
+    &__product-name {
+        color: $color-text-black;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 29px;
+    }
+
+    &__product-text {
+        width: 276px;
+        padding-top: 14px;
+        padding-bottom: 16px;
+        color: rgb(136, 136, 136);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+    }
+
+    &__product-price {
+        color: rgb(5, 5, 5);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        padding-bottom: 15px;
+    }
+
+    &__link-box {
+        display: flex;
+        gap: 30px;
+    }
+
+    &__link {
+        color: $color-text-black;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 210%;
+        text-decoration-line: underline;    
+    }
+
+    &__form-count {
+        grid-column: 8;
+    }
+
+    &__count { 
+        appearance: none;
+        width: 71px;
+        height: 51px;
+        border-radius: 6px;
+        background: rgb(247, 246, 246);
+        border: none;
+        text-align: center;
+
+        color: $color-text-black;
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 210%;
+        text-align: center;
+    }
+
+    &__btn-box {
+        margin-top: 18px;
+        display: flex;
+        gap: 7px;
+    }
+
+    &__btn {
+        width: 200px;
+        height: 37px;
+        box-sizing: border-box;
+        border: 1px solid rgb(0, 0, 0);
+        border-radius: 50px;
+        background: transparent;
+        text-decoration: none;
+        padding-top: 10px;
+
+        color: $color-text-black;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        text-align: center;
+    }
+
+    &__buy {
+        grid-column: span 4;
+        border-radius: 20px;
+        background: rgb(247, 246, 246);
+    }
+
+    &__buy-title {
+        color: $color-text-black;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 29px;
+        text-align: center;
+        padding-top: 42px;
+        padding-bottom: 35px;
+    }
+
+    &__input-box {
+        display: flex;
+        flex-direction: column;
+        gap: 41px;
+        margin-left: 27px;
+        margin-right: 64px;
+    }
+
+    &__input-text {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid rgb(202, 205, 216);
+        color: $color-text-black;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+    }
+
+    &__input-text::placeholder {
+        color: $color-text-black;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+    }
+
+    &__buy-total {
+        padding-top: 64px;
+        padding-bottom: 18px;
+        color: $color-text-black;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 29px;
+        text-align: center;
+    }
+
+    &__buy-btn {
+        width: 290px;
+        height: 41px;
+        box-sizing: border-box;
+        border: 1px solid rgb(4, 4, 4);
+        border-radius: 20px;
+        background: transparent;
+        margin-left: 44px;
+        margin-right: 44px;
+        margin-bottom: 128px;
+
+        color: $color-text-black;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: center;
+    }
+    &__buy-btn:active {
+        animation-name: active-buy-btn;
+        animation-duration: 2s;
+    }
+}
